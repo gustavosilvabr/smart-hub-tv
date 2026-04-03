@@ -41,10 +41,10 @@ export const Hero = () => {
                             <Sparkles size={14} />
                             SITE OFICIAL • SMART HUB PLAY TV
                         </div>
-                        <h1 className="text-5xl md:text-8xl font-black mb-10 leading-[1.2] italic tracking-tighter text-glow drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] overflow-visible">
+                        <h1 className="text-4xl sm:text-5xl md:text-8xl font-black mb-10 leading-[1.2] italic tracking-tighter text-glow drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] overflow-visible">
                             <span className="block text-white uppercase">O MELHOR</span>
-                            <span className="gradient-text uppercase block pr-12 pb-2">DA TV</span>
-                            <span className="block text-2xl md:text-3xl font-bold tracking-widest text-gray-400 mt-8 not-italic uppercase opacity-80">EM UM SÓ LUGAR</span>
+                            <span className="gradient-text uppercase block pb-2">DA TV</span>
+                            <span className="block text-xl md:text-3xl font-bold tracking-widest text-gray-400 mt-8 not-italic uppercase opacity-80">EM UM SÓ LUGAR</span>
                         </h1>
                         
                         <div className="space-y-6 mb-12">
@@ -102,6 +102,17 @@ export const Hero = () => {
                     </motion.div>
                 </div>
             </div>
+
+            {/* Scroll Indicator */}
+            <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2, duration: 1 }}
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2"
+            >
+                <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-white/40 italic">SCROLL PARA VER MAIS</span>
+            </motion.div>
         </section>
     )
 }

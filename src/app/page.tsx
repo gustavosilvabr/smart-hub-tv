@@ -1,28 +1,33 @@
-"use client"
-import { motion } from "framer-motion"
+import dynamic from "next/dynamic"
 import { UrgencyBanner } from "@/components/UrgencyBanner"
 import { Navbar } from "@/components/Navbar"
 import { Hero } from "@/components/Hero"
-import { PlatformCarousel } from "@/components/PlatformCarousel"
-import { AppShowcase } from "@/components/AppShowcase"
-import { Plans } from "@/components/Plans"
 import { MovieShowcase } from "@/components/MovieShowcase"
-import { BestServer } from "@/components/BestServer"
-import { DeviceCompatibility } from "@/components/DeviceCompatibility"
-import { Economy } from "@/components/Economy"
-import { TrustSeals } from "@/components/TrustSeals"
-import { Testimonials } from "@/components/Testimonials"
-import { FAQ } from "@/components/FAQ"
-import { Footer } from "@/components/Footer"
+import { PlatformCarousel } from "@/components/PlatformCarousel"
+
+// Heavy below-the-fold components → code-split for smaller initial bundle
+const AppShowcase         = dynamic(() => import("@/components/AppShowcase").then(m => ({ default: m.AppShowcase })))
+const Economy             = dynamic(() => import("@/components/Economy").then(m => ({ default: m.Economy })))
+const TrustSeals          = dynamic(() => import("@/components/TrustSeals").then(m => ({ default: m.TrustSeals })))
+const BestServer          = dynamic(() => import("@/components/BestServer").then(m => ({ default: m.BestServer })))
+const DeviceCompatibility = dynamic(() => import("@/components/DeviceCompatibility").then(m => ({ default: m.DeviceCompatibility })))
+const Testimonials        = dynamic(() => import("@/components/Testimonials").then(m => ({ default: m.Testimonials })))
+const Plans               = dynamic(() => import("@/components/Plans").then(m => ({ default: m.Plans })))
+const FAQ                 = dynamic(() => import("@/components/FAQ").then(m => ({ default: m.FAQ })))
+const Footer              = dynamic(() => import("@/components/Footer").then(m => ({ default: m.Footer })))
+const WhatsAppButton      = dynamic(() => import("@/components/WhatsAppButton").then(m => ({ default: m.WhatsAppButton })))
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-dark">
+      {/* Above-the-fold: SSR'd for instant paint */}
       <UrgencyBanner />
       <Navbar />
       <Hero />
       <MovieShowcase />
       <PlatformCarousel />
+
+      {/* Below-the-fold: lazy hydrated after LCP */}
       <AppShowcase />
       <Economy />
       <TrustSeals />
@@ -32,27 +37,7 @@ export default function Home() {
       <Plans />
       <FAQ />
       <Footer />
-      
-      {/* WhatsApp Floating Button */}
-      <motion.a 
-         href="https://wa.me/5561992030064?text=Olá,%20vim%20pelo%20site%20e%20quero%20conhecer%20o%20aplicativo!"
-         target="_blank"
-         rel="noopener noreferrer"
-         initial={{ scale: 0, opacity: 0 }}
-         animate={{ scale: [1, 1.1, 1], opacity: 1 }}
-         transition={{ 
-           scale: { repeat: Infinity, duration: 2 },
-           default: { delay: 1, type: "spring" }
-         }}
-         whileHover={{ scale: 1.2 }}
-         className="fixed bottom-10 right-10 z-[100] bg-[#25D366] p-4 rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.5)] flex items-center justify-center"
-      >
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-          alt="WhatsApp" 
-          className="w-10 h-10"
-        />
-      </motion.a>
+      <WhatsAppButton />
     </main>
   )
 }

@@ -14,7 +14,7 @@ export const Navbar = () => {
           <img 
             src="/logo.png" 
             alt="Smart Hub Play TV Official Logo" 
-            className="h-24 md:h-48 w-auto object-contain brightness-125 drop-shadow-[0_0_20px_rgba(124,58,237,0.6)]"
+            className="h-14 md:h-48 w-auto object-contain brightness-125 drop-shadow-[0_0_20px_rgba(124,58,237,0.6)]"
           />
         </motion.div>
         

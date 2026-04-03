@@ -33,7 +33,7 @@ export const AppShowcase = () => {
                   className="mb-16"
                 >
                     <h2 className="text-3xl md:text-5xl font-black italic tracking-tighter uppercase mb-4 text-glow leading-[1.2] overflow-visible">
-                        CONHEÇA NOSSO <span className="gradient-text pr-12 pb-2 inline-block">APLICATIVO</span>
+                        CONHEÇA NOSSO <span className="gradient-text pb-2 inline-block">APLICATIVO</span>
                     </h2>
                     <p className="text-gray-400 font-medium italic">APERTE NO VÍDEO ABAIXO PARA VER POR DENTRO!</p>
                 </motion.div>
@@ -60,7 +60,7 @@ export const AppShowcase = () => {
                                     <div className="w-20 h-20 rounded-full bg-primary flex items-center justify-center shadow-[0_0_30px_rgba(124,58,237,0.6)] animate-pulse-slow">
                                         <Play size={40} className="text-white fill-white ml-2" />
                                     </div>
-                                    <span className="mt-6 text-white font-black italic uppercase tracking-[0.3em] text-sm animate-bounce">APERTE PARA CONHECER</span>
+                                    <span className="mt-6 text-white font-black italic uppercase tracking-[0.2em] text-[10px] md:text-sm animate-bounce">APERTE PARA CONHECER</span>
                                     <div className="mt-2 flex items-center gap-2 text-primary/80 font-bold text-[10px] uppercase">
                                         <Volume2 size={12} /> ÁUDIO ATIVADO AO CLICAR
                                     </div>
@@ -91,7 +91,7 @@ export const AppShowcase = () => {
                        whileTap={{ scale: 0.95 }}
                        animate={{ scale: [1, 1.03, 1] }}
                        transition={{ repeat: Infinity, duration: 2.5 }}
-                       className="bg-primary hover:bg-primary-dark text-white font-black py-6 px-12 rounded-full text-lg shadow-[0_20px_50px_rgba(124,58,237,0.4)] transition-all uppercase italic"
+                       className="bg-primary hover:bg-primary-dark text-white font-black py-4 md:py-6 px-8 md:px-12 rounded-full text-base md:text-lg shadow-[0_20px_50px_rgba(124,58,237,0.4)] transition-all uppercase italic block w-full sm:w-auto relative z-10"
                      >
                         GOSTEI! QUERO COMEÇAR AGORA
                      </motion.a>

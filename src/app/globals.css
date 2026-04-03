@@ -34,9 +34,19 @@
   }
 }
 
+/* ── Infinite scroll CSS animation (GPU-composited, zero JS overhead) ── */
+@keyframes scrollLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
+  /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -49,6 +59,8 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .glass {
@@ -97,7 +109,7 @@ body {
 }
 
 *::-webkit-scrollbar {
-  width: 6px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {

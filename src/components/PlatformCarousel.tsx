@@ -1,6 +1,3 @@
-"use client"
-import { motion } from "framer-motion"
-
 const PLATFORMS = [
   { name: "NETFLIX", logo: "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" },
   { name: "DISNEY+", logo: "https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" },
@@ -26,24 +23,25 @@ export const PlatformCarousel = () => {
             </div>
 
             <div className="flex overflow-hidden">
-                <motion.div 
-                    animate={{ x: ["0%", "-100%"] }}
-                    transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+                <div
+                    style={{ animation: "scrollLeft 30s linear infinite", willChange: "transform" }}
                     className="flex shrink-0 items-center gap-16 whitespace-nowrap min-w-full py-10"
                 >
                     {[...PLATFORMS, ...PLATFORMS].map((platform, i) => (
-                        <div key={i} className="flex items-center justify-center shrink-0 w-48 px-4 opacity-100 transition-all duration-500 cursor-default group">
-                             <img 
-                                src={platform.logo} 
-                                alt={platform.name} 
+                        <div key={i} className="flex items-center justify-center shrink-0 w-48 px-4 cursor-default group">
+                            <img
+                                src={platform.logo}
+                                alt={platform.name}
+                                loading="lazy"
+                                decoding="async"
                                 className="max-h-12 w-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.4)] group-hover:scale-110 transition-transform"
-                             />
+                            />
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
             
-             <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         </section>
     )
 }
