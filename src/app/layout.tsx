@@ -13,8 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Hub TV",
-  description: "Smart Hub TV",
+  title: "Smart Hub TV | O Melhor Sistema de Entretenimento 4K de 2026",
+  description: "Assine Smart Hub Play TV e tenha acesso a mais de 100.000 conteúdos: canais 4K, filmes, séries e suporte 24h. O melhor custo-benefício e estabilidade sem travamentos.",
+  keywords: ["IPTV premium", "Smart Hub TV", "streaming 4K", "melhor iptv 2026", "canais de tv por assinatura", "filmes e séries online"],
+  authors: [{ name: "Smart Hub Development Team" }],
+  openGraph: {
+    title: "Smart Hub TV | Entretenimento sem Limites",
+    description: "Sua TV, seus canais, sua escolha. Qualidade Ultra-HD e Zero Travamentos.",
+    url: "https://smarthubplaytv.online",
+    siteName: "Smart Hub Play TV",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Smart Hub TV - A Revolução do Streaming",
+    description: "Milhares de canais e filmes em um só lugar por um preço justo.",
+  }
 };
 
 export default function RootLayout({
@@ -24,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="pt-br"
+      lang="pt-BR"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
