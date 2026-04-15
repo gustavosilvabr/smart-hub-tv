@@ -24,11 +24,11 @@ export default function Home() {
       <UrgencyBanner />
       <Navbar />
       <Hero />
+      <AppShowcase />
       <MovieShowcase />
       <PlatformCarousel />
 
       {/* Below-the-fold: lazy hydrated after LCP */}
-      <AppShowcase />
       <Economy />
       <TrustSeals />
       <BestServer />
