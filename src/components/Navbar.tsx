@@ -27,12 +27,12 @@ export const Navbar = () => {
         </div>
 
         <motion.a 
-          href="https://wa.me/5561992030064"
+          href="https://wa.me/5561992030064?text=vim%20do%20site%20e%20quero%20testar%20o%20aplicativo!"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 rounded-full text-sm shadow-[0_0_20px_rgba(124,58,237,0.5)] transition-all"
         >
-          ASSINAR AGORA
+          TESTAR AGORA
         </motion.a>
       </div>
     </nav>

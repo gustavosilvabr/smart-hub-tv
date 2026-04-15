@@ -75,12 +75,12 @@ export const BestServer = () => {
                                <p className="text-gray-400 leading-relaxed italic max-w-md">Instalação imediata via WhatsApp. Você recebe o link e em 2 minutos está assistindo com qualidade máxima.</p>
                           </div>
                           <motion.a 
-                             href="https://wa.me/5561992030064"
+                             href="https://wa.me/5561992030064?text=vim%20do%20site%20e%20quero%20testar%20o%20aplicativo!"
                              whileHover={{ scale: 1.05 }}
                              whileTap={{ scale: 0.95 }}
                              className="bg-primary py-5 px-12 rounded-3xl font-black text-xl italic uppercase tracking-widest shadow-[0_20px_40px_rgba(124,58,237,0.4)] whitespace-nowrap"
                           >
-                               COMEÇAR AGORA
+                               TESTAR AGORA
                           </motion.a>
                      </div>
                 </div>

@@ -91,12 +91,12 @@ export const FAQ = () => {
                 <div className="mt-16 text-center">
                      <p className="text-gray-500 text-sm mb-6 font-medium italic">AINDA TEM DÚVIDAS? CHAME NOSSO SUPORTE AGORA!</p>
                      <motion.a 
-                       href="https://wa.me/5561992030064?text=Olá,%20vim%20pelo%20site%20e%20quero%20conhecer%20o%20aplicativo!"
+                       href="https://wa.me/5561992030064?text=vim%20do%20site%20e%20quero%20testar%20o%20aplicativo!"
                        whileHover={{ scale: 1.05 }}
                        whileTap={{ scale: 0.95 }}
                        className="inline-flex bg-primary hover:bg-primary-dark text-white font-black py-5 px-10 rounded-full text-lg shadow-[0_20px_40px_rgba(124,58,237,0.3)] transition-all uppercase italic"
                      >
-                        FALAR COM ATENDENTE
+                        TESTAR AGORA
                      </motion.a>
                 </div>
             </div>

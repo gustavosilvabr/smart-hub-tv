@@ -138,7 +138,7 @@ export const Plans = () => {
 
                             <div className="w-full mt-auto">
                                 <motion.a 
-                                  href={`https://wa.me/5561992030064?text=Olá,%20vim%20pelo%20site%20e%20quero%20conhecer%20o%20aplicativo!%20(Interesse%20no%20Plano%20${plan.name})`}
+                                  href={`https://wa.me/5561992030064?text=vim%20do%20site%20e%20quero%20testar%20o%20aplicativo%20antes%20de%20pagar%20os%20R$${plan.price},00%20do%20plano%20${plan.name}`}
                                   whileTap={{ scale: 0.95 }}
                                   animate={{ 
                                     scale: plan.highlight ? [1, 1.05, 1] : [1, 1.02, 1],
@@ -151,7 +151,7 @@ export const Plans = () => {
                                   transition={{ repeat: Infinity, duration: 2 }}
                                   className={`w-full py-6 rounded-2xl font-black text-xl transition-all shadow-xl uppercase italic tracking-tighter block text-center ${plan.highlight ? 'bg-primary hover:bg-primary-dark text-white scale-105 shadow-primary/30' : 'bg-white/10 hover:bg-white/20 text-white'}`}
                                 >
-                                    ASSINAR AGORA
+                                    TESTAR AGORA
                                 </motion.a>
                             </div>
                         </motion.div>

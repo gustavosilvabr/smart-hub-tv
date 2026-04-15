@@ -86,14 +86,14 @@ export const AppShowcase = () => {
                 
                 <div className="mt-16">
                      <motion.a 
-                       href="https://wa.me/5561992030064?text=Olá,%20vim%20pelo%20site%20e%20quero%20conhecer%20o%20aplicativo!"
+                       href="https://wa.me/5561992030064?text=vim%20do%20site%20e%20quero%20testar%20o%20aplicativo!"
                        whileHover={{ scale: 1.05 }}
                        whileTap={{ scale: 0.95 }}
                        animate={{ scale: [1, 1.03, 1] }}
                        transition={{ repeat: Infinity, duration: 2.5 }}
                        className="bg-primary hover:bg-primary-dark text-white font-black py-4 md:py-6 px-8 md:px-12 rounded-full text-base md:text-lg shadow-[0_20px_50px_rgba(124,58,237,0.4)] transition-all uppercase italic block w-full sm:w-auto relative z-10"
                      >
-                        GOSTEI! QUERO COMEÇAR AGORA
+                        TESTAR AGORA
                      </motion.a>
                 </div>
             </div>

@@ -38,14 +38,14 @@ export const Economy = () => {
                         </div>
 
                         <motion.a 
-                          href="https://wa.me/5561992030064?text=Olá,%20vim%20pelo%20site%20e%20quero%20conhecer%20o%20aplicativo!"
+                          href="https://wa.me/5561992030064?text=vim%20do%20site%20e%20quero%20testar%20o%20aplicativo!"
                           whileTap={{ scale: 0.95 }}
                           whileHover={{ scale: 1.02 }}
                           animate={{ scale: [1, 1.03, 1] }}
                           transition={{ repeat: Infinity, duration: 3 }}
                           className="w-full bg-primary py-5 rounded-2xl font-black text-center text-xl inline-block uppercase italic tracking-wider transition-all shadow-[0_0_30px_rgba(124,58,237,0.4)]"
                         >
-                             QUERO ECONOMIZAR AGORA!
+                             TESTAR AGORA
                         </motion.a>
                     </div>
 
